@@ -1,20 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ImageBackground } from 'react-native';
+import HomeScreen from './screens/HomeScreen.jsx';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+  return (<>
+        <ImageBackground blurRadius={70} className='flex-1' source={require('./assets/images/bg.png')}>
+          <HomeScreen />
+        </ImageBackground>
+        <StatusBar style="light" />
+  </>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+
+
+
